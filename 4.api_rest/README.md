@@ -35,7 +35,7 @@ Insertar nuevo pais
 
 Actualizar pais (se envia el id por url)
 
-![image](https://user-images.githubusercontent.com/75379137/143723120-45b2b160-b57d-4033-8927-b4e65ee60352.png)
+![image](https://user-images.githubusercontent.com/75379137/143723798-5fa469fd-ff6f-4196-a42b-4fa45b87bdb5.png)
 
 Eliminar pais (se envia el id por url)
 

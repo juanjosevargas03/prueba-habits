@@ -1,0 +1,96 @@
+2.a) 
+
+db.puntajes.aggregate([
+{
+    $lookup: {
+        from:"usuarios",
+        localField:"Usuario",
+        foreignField:"_id",
+        as:"user",
+    },  
+},
+{
+    $unwind: "$user"
+},
+{
+    $match:{
+        $and:[
+        { Activo:true}, 
+        { 'user.Pais':ObjectId("61a00703236b1b5b5af5af72")},  
+        { Fecha:{
+            $gte: ISODate("2021-11-10T00:00:00.000Z"),
+            $lt: ISODate("2021-11-25T00:00:00.000Z")
+        } }, 
+        ]
+    }
+    
+},
+{
+    $sort:{PuntosObtenidos:-1},
+},
+//{ $count: "total de registros" }     // descomentar si desea el total de registros
+])
+
+***************************************************************************************
+2.b) 
+
+db.usuarios.aggregate([
+{
+    $lookup: {
+        from:"puntajes",
+        localField:"_id",
+        foreignField:"Usuario",
+        as:"puntaje",
+    },  
+},
+{
+    $unwind: "$puntaje"
+},
+{
+    $match:
+    {
+        $and:[
+        { 'Edad':{$lt:50}}, 
+        { 'Activo':true}, 
+        ]} 
+},
+{
+    $sort:{'puntaje.PuntosObtenidos':-1},
+},
+{ $limit: 2 }     
+])
+
+*****************************************************************************************
+
+2.c) 
+
+db.puntajes.aggregate([
+{
+    $lookup: {
+        from:"usuarios",
+        localField:"Usuario",
+        foreignField:"_id",
+        as:"user",
+    },  
+},
+{
+    $unwind: "$user"
+},
+{
+    $match:{
+        $and:[
+        {"PuntosObtenidos": { "$gt": 0 }}, 
+        ]
+    }
+    
+},
+{ $group: {
+        "_id": {"usuario":"$Usuario"},
+        "puntajePromedio": { "$avg": "$PuntosObtenidos" },
+        "primeraFecha": { "$min": "$Fecha" },
+        "ultimaFecha": { "$max": "$Fecha" }
+}},
+{
+    $sort:{puntajePromedio:1},
+},
+])

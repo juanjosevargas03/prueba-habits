@@ -1,0 +1,25 @@
+1. ¿Qué haría usted para que cuando un cliente compre algún producto se utilicen
+la menor cantidad de botellas, y se desperdicie la menor cantidad de espacio en
+las mismas?
+
+R/ lo que haria seria que recorreria las capacidades de las botellas e iria restando con la cantidad a comprar, si el resultado es negativo, quiere decir que la cantidad es menor a la capacidad de la botella que se este evaluando en ese momento entonces procederia a validar con la siguiente botella mas pequeña hasta que el resultado sea positivo, entonces se selecciona esa botella y se realiza el mismo proceso con el coeficiente restante, hasta que el coeficiente sea menor o igual a 100 ya que es la capacidad de la botella mas pequeña y se selecciona una ultima botella de 100.
+
+
+2. Plasme la descripción de su algoritmo.
+
+R/
+   *ciclo que itera un array de la capacidad de las botellas descendentemente
+   *resta de la cantidad a comprar menos la capacidad que se este iterando en ese momento
+   *condicional que evalua si el resultado de la resta es negativo o positivo
+   *continua con la siguiente capacidad de botella o la selecciona en caso de que sea positiva
+   *se realiza el mismo proceso con el coeficiente restante hasta que sea menor o igual a 100 ml
+   *se seleciona la ultima botella de 100 ml
+
+
+3. Ejemplifique cómo distribuiría el liquido en los contenedores de la tabla de arriba
+con las siguientes compras ficticias, siguiendo su propuesta.
+
+R/
+paco:  1 de 350 ml y 1 de 100 ml
+hugo: 2 de 100 ml
+luis: 1 de 500 ml y 1 de 350 ml y 1 de 100 ml

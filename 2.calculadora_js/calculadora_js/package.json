@@ -1,0 +1,16 @@
+{
+  "name": "calculadora_js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "set NODE_OPTIONS=--experimental-vm-modules && npx jest --detectOpenHandles",
+    "start": "node src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^27.3.1"
+  }
+}

@@ -22,4 +22,17 @@ y por ultimo las restas y sumas y se devuelve el resultado
 
 ![image](https://user-images.githubusercontent.com/75379137/143722589-020ddfb1-492d-4f03-b83b-15ccf1322b90.png)
 
+Resultados
+
+![image](https://user-images.githubusercontent.com/75379137/143722778-c69d8651-66f4-4a43-93e7-f37960e4a4bc.png)
+
+Archivo de pruebas
+
+![image](https://user-images.githubusercontent.com/75379137/143722800-65a0f43b-4a2b-49e8-b1b1-99376942ade6.png)
+
+Ejecutando pruebas
+
+![image](https://user-images.githubusercontent.com/75379137/143722805-79795d29-a5ef-462c-b232-2153d93cbf97.png)
+
+
 

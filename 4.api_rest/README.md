@@ -49,7 +49,7 @@ Lista de puntajes
 
 Insertar puntaje (en el campo Usuario se envia el id del Usuario)
 
-![image](https://user-images.githubusercontent.com/75379137/143723570-c9fef1a1-9d3d-40b2-81e6-e84cfdca90bc.png)
+![image](https://user-images.githubusercontent.com/75379137/143723809-b0ac3e15-5082-4c4e-825a-2394644ae6c5.png)
 
 Actualizar puntaje (se envia el id por url)
 
